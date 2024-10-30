@@ -28,31 +28,33 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public void insertBook(Book newBook) {
+        bookDao.insertBook(newBook);
 
     }
 
     @Override
     public List<Book> getBooksByGenre(Genre genre) {
-        return null;
+        return bookDao.getBooksByGenre(genre);
     }
 
     @Override
     public void updateBook(Long id, Book newBook) {
-
+        bookDao.updateBook(id, newBook);
     }
 
     @Override
     public void deleteBook(Long id) {
+        bookDao.deleteBook(id);
 
     }
 
     @Override
     public List<Book> getBooksGroupedByAuthor() {
-        return null;
+        return bookDao.getBooksGroupedByAuthor();
     }
 
     @Override
     public List<Book> getBooksSortedByPublicationDate(String ascOrDesc) {
-        return null;
+        return bookDao.getBooksSortedByPublicationDate(ascOrDesc);
     }
 }
